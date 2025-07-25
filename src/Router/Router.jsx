@@ -7,12 +7,16 @@ import Register from "../Pages/Authentication/Register";
 import NotFound from "../Pages/Error/NotFound";
 import Apartments from "../Components/Apartments";
 import PrivateRoute from "../Provider/PrivateRoute";
-import DashBoardLayout from "../Layouts/DashboardLayout";
-import AdminProfile from "../DashBoard/Admin/AdminProfile";
-import ManageMembers from "../DashBoard/Admin/ManageMember/ManageMembers";
-import MakeAnnouncement from "../DashBoard/Admin/MakeAnnouncement";
-import AgreementRequests from "../DashBoard/Admin/AgreementRequests";
-import ManageCoupons from "../DashBoard/Admin/ManageCoupons";
+import DashBoardLayout from "../Layouts/DashBoardLayout";
+import AdminProfile from "../Pages/DashBoard/Admin/AdminProfile";
+import ManageMembers from "../Pages/DashBoard/Admin/ManageMember/ManageMembers";
+import MakeAnnouncement from "../Pages/DashBoard/Admin/MakeAnnouncement";
+import AgreementRequests from "../Pages/DashBoard/Admin/AgreementRequests";
+import ManageCoupons from "../Pages/DashBoard/Admin/ManageCoupons";
+import MemberProfile from "../Pages/DashBoard/Member/MemberProfile";
+import UserProfile from "../Pages/DashBoard/User/UserProfile";
+
+
 
 
 const router = createBrowserRouter([
@@ -73,13 +77,17 @@ const router = createBrowserRouter([
                 path:'manageCoupons',
                 element:<ManageCoupons></ManageCoupons>
             },
+
+            // member routes 
             {
-                path:'manageCoupons',
-                element:<ManageCoupons></ManageCoupons>
+                path:'memberProfile',
+                element:<MemberProfile></MemberProfile>
             },
+
+            // user routes 
             {
-                path:'manageCoupons',
-                element:<ManageCoupons></ManageCoupons>
+                path:'userProfile',
+                element:<UserProfile></UserProfile>
             },
         ]
     

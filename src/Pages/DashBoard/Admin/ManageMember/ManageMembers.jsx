@@ -2,6 +2,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
+import MemberTable from './MemberTable';
 
 const ManageMembers = () => {
     const axiosSecure = useAxiosSecure();
@@ -20,15 +21,18 @@ const ManageMembers = () => {
     //  Filter only members
     const members = users.filter(user => user.role === 'member');
 
-    return (
-        <div className="p-4">
-            <h2 className="text-2xl font-bold mb-6">Admin Dashboard</h2>
+    console.log(members);
 
+    return (
+        <div className="p-4 ">
             {members.length === 0 ? (
                 <p>No members found.</p>
-            ) : (
-                <ManageMembers members={members} refetch={refetch} />
-            )}
+            ) : <>
+            
+            <div className='lg:max-w-5xl mx-auto'>
+                <MemberTable members={members} refetch={refetch} ></MemberTable>
+            </div>
+            </>}
         </div>
     );
 };

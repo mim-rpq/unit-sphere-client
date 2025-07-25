@@ -20,7 +20,7 @@ const MemberTable = ({ members, refetch }) => {
 
     return (
         <div>
-            <h3 className="text-xl font-semibold mb-4">Manage Members</h3>
+            <h3 className="text-xl font-semibold mb-4">Manage All Members</h3>
             {members.length === 0 ? (
                 <p>No members found.</p>
             ) : (
