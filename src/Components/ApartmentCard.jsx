@@ -4,11 +4,13 @@ import { useNavigate } from 'react-router';
 import useAxiosPublic from '../hooks/useAxiosPublic';
 import { AuthContext } from '../Provider/AuthContext';
 import Swal from 'sweetalert2';
+import useRole from '../hooks/useRole';
 
 const ApartmentCard = ({ apartment }) => {
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const axiosInstance = useAxiosPublic();
+      const { role } = useRole();
 
     const handleAgreement = async () => {
         if (!user) {
@@ -79,10 +81,15 @@ const ApartmentCard = ({ apartment }) => {
 
                 <button
                     onClick={handleAgreement}
-                    className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition duration-200"
+                    disabled={role === "admin"}
+                    className={`w-full py-2 rounded-lg font-semibold transition duration-200 ${role === "admin"
+                            ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                            : "bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700"
+                        }`}
                 >
                     Request Agreement
                 </button>
+
             </div>
         </div>
     );
