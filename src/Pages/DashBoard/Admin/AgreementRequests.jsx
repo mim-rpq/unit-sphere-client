@@ -33,7 +33,17 @@ const AgreementRequests = () => {
       });
   };
 
-
+  const handleReject = (id) => {
+    axiosSecure.patch(`/agreements/reject/${id}`)
+      .then(() => {
+        setRequests(prev => prev.filter(req => req._id !== id));
+        Swal.fire("Rejected", "Request has been rejected.", "info");
+      })
+      .catch(err => {
+        console.error(err);
+        Swal.fire("Error", "Failed to reject request", "error");
+      });
+  };
 
   if (loading) return <Spinner />;
 
@@ -79,7 +89,7 @@ const AgreementRequests = () => {
                       Accept
                     </button>
                     <button
-                 
+                      onClick={() => handleReject(req._id)}
                       className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full text-sm"
                     >
                       Reject
