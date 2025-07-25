@@ -1,8 +1,9 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
-import CouponCard from "../../components/CouponCard";
 import Spinner from "../Shared/Spinner";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import CouponCard from "./CouponCard";
+
 
 const ShowCoupons = () => {
     const axiosSecure = useAxiosSecure();
