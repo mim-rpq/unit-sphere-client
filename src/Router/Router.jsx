@@ -7,7 +7,12 @@ import Register from "../Pages/Authentication/Register";
 import NotFound from "../Pages/Error/NotFound";
 import Apartments from "../Components/Apartments";
 import PrivateRoute from "../Provider/PrivateRoute";
-import DashBoardLayout from "../Layouts/DashBoardLayout";
+import DashBoardLayout from "../Layouts/DashboardLayout";
+import AdminProfile from "../DashBoard/Admin/AdminProfile";
+import ManageMembers from "../DashBoard/Admin/ManageMember/ManageMembers";
+import MakeAnnouncement from "../DashBoard/Admin/MakeAnnouncement";
+import AgreementRequests from "../DashBoard/Admin/AgreementRequests";
+import ManageCoupons from "../DashBoard/Admin/ManageCoupons";
 
 
 const router = createBrowserRouter([
@@ -47,6 +52,36 @@ const router = createBrowserRouter([
         element:<PrivateRoute>
             <DashBoardLayout/>
         </PrivateRoute>,
+        children:[
+            {
+                path:'adminProfile',
+                element:<AdminProfile></AdminProfile>
+            },
+            {
+                path:'manageMembers',
+                element:<ManageMembers></ManageMembers>
+            },
+            {
+                path:'makeAnnouncement',
+                element:<MakeAnnouncement></MakeAnnouncement>
+            },
+            {
+                path:'agreementRequests',
+                element:<AgreementRequests></AgreementRequests>
+            },
+            {
+                path:'manageCoupons',
+                element:<ManageCoupons></ManageCoupons>
+            },
+            {
+                path:'manageCoupons',
+                element:<ManageCoupons></ManageCoupons>
+            },
+            {
+                path:'manageCoupons',
+                element:<ManageCoupons></ManageCoupons>
+            },
+        ]
     
     },
 

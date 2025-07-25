@@ -5,6 +5,8 @@ import { AuthContext } from '../Provider/AuthContext';
 
 const useAxiosSecure = () => {
 const {user}=  useContext(AuthContext)
+
+// console.log(user.accessToken);
 const axiosSecure = axios.create({
     baseURL:"http://localhost:5000",
     headers:{
