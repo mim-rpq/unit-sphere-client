@@ -21,6 +21,19 @@ const AgreementRequests = () => {
       });
   }, [axiosSecure]);
 
+  const handleAccept = (id, email) => {
+    axiosSecure.patch(`/agreements/accept/${id}?email=${email}`)
+      .then(() => {
+        setRequests(prev => prev.filter(req => req._id !== id));
+        Swal.fire("Accepted", "User is now a member.", "success");
+      })
+      .catch(err => {
+        console.error(err);
+        Swal.fire("Error", "Failed to accept request", "error");
+      });
+  };
+
+
 
   if (loading) return <Spinner />;
 
@@ -60,13 +73,13 @@ const AgreementRequests = () => {
                   <td className="py-3 px-4">{new Date(req.requestedDate).toLocaleDateString()}</td>
                   <td className="py-3 px-4 text-center space-x-2">
                     <button
-                   
+                      onClick={() => handleAccept(req._id, req.userEmail)}
                       className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-full text-sm"
                     >
                       Accept
                     </button>
                     <button
-                  
+                 
                       className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full text-sm"
                     >
                       Reject
