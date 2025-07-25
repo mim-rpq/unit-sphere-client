@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import MemberTable from './MemberTable';
+import Spinner from '../../../Shared/Spinner';
 
 const ManageMembers = () => {
     const axiosSecure = useAxiosSecure();
@@ -15,7 +16,9 @@ const ManageMembers = () => {
         },
     });
 
-    if (isLoading) return <p>Loading members...</p>;
+    if (isLoading){
+        <Spinner></Spinner>
+    };
     if (isError) return <p>Failed to load members.</p>;
 
     //  Filter only members

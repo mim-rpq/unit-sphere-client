@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { FiTrash2 } from "react-icons/fi";
 import Swal from "sweetalert2";
+import Spinner from "../../Shared/Spinner";
 
 const ManageCoupons = () => {
     const axiosSecure = useAxiosSecure();
@@ -59,23 +60,27 @@ const ManageCoupons = () => {
         }
     };
 
-
+    if (isLoading) {
+        return <Spinner></Spinner>;
+    }
     return (
         <div className="p-6">
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-800">Manage Coupons</h2>
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition"
+                    className="bg-primary text-white px-4 py-2 rounded-lg shadow hover:bg-secondary transition"
                 >
                     + Add Coupon
                 </button>
             </div>
 
-            {isLoading ? (
-                <p>Loading coupons...</p>
-            ) : coupons.length === 0 ? (
-                <p>No coupons found.</p>
+            {coupons.length === 0 ? (
+                <>
+                    <div className="h-full flex justify-center items-center">
+                        <h1>No Coupons available add a coupons</h1>
+                    </div>
+                </>
             ) : (
                 <div className="overflow-x-auto rounded-lg shadow border">
                     <table className="min-w-full bg-white">
@@ -90,8 +95,8 @@ const ManageCoupons = () => {
                         <tbody>
                             {coupons.map((coupon) => (
                                 <tr key={coupon._id} className="border-t hover:bg-gray-50">
-                                    <td className="p-3">{coupon.code}</td>
-                                    <td className="p-3">{coupon.discount}%</td>
+                                    <td className="p-3 font-bold">{coupon.code}</td>
+                                    <td className="p-3 text-red-500">{coupon.discount}%</td>
                                     <td className="p-3">{coupon.description}</td>
                                     <td className="p-3">
                                         <button
