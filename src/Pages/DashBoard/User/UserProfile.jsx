@@ -10,16 +10,17 @@ const UserProfile = () => {
     const { user } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
 
-    const { data: userData, isPending, isError } = useQuery({
-        queryKey: ['my-profile', user?.email],
+    const { data: userData, isLoading, isError } = useQuery({
+        queryKey: ['my-profile'],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/users/${user?.email}`);
+            const res = await axiosSecure.get('/users/me');
             return res.data;
         },
         enabled: !!user?.email,
     });
 
-    if (isPending) return <Spinner />;
+
+    if (isLoading) return <Spinner />;
     if (isError) return <p className="text-red-500 text-center mt-8">Failed to load profile data.</p>;
 
     return (
