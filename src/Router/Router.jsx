@@ -15,6 +15,8 @@ import AgreementRequests from "../Pages/DashBoard/Admin/AgreementRequests";
 import ManageCoupons from "../Pages/DashBoard/Admin/ManageCoupons";
 import MemberProfile from "../Pages/DashBoard/Member/MemberProfile";
 import UserProfile from "../Pages/DashBoard/User/UserProfile";
+import Announcements from "../Pages/Shared/Announcements";
+
 
 
 
@@ -82,6 +84,11 @@ const router = createBrowserRouter([
             {
                 path:'memberProfile',
                 element:<MemberProfile></MemberProfile>
+            },
+
+            {
+                path:'announcements',
+                element:<Announcements></Announcements>
             },
 
             // user routes 

@@ -10,55 +10,57 @@ import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 
 const Register = () => {
-    const { createUser, setUser, userLoading, updateUserProfile, setUserLoading } =useContext(AuthContext);
+    const { createUser, setUser, userLoading, updateUserProfile, setUserLoading } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [passwordInput, setPasswordInput] = useState('');
     const axiosInstance = useAxiosPublic();
     const navigate = useNavigate();
 
- const handleRegister = async (e) => {
-    e.preventDefault();
+    const handleRegister = async (e) => {
+        e.preventDefault();
 
-    const form = e.target;
-    const name = form.name.value;
-    const photoURL = form.photoUrl.value;
-    const email = form.email.value;
-    const password = form.password.value;
+        const form = e.target;
+        const name = form.name.value;
+        const photoURL = form.photoUrl.value;
+        const email = form.email.value;
+        const password = form.password.value;
 
-    const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailRegExp.test(email)) return toast.error('Please enter a valid email address.');
-    if (password.length < 8) return toast.error('Password must be at least 8 characters long.');
-    if (!/[a-z]/.test(password)) return toast.error('Password must include at least one lowercase letter.');
-    if (!/[A-Z]/.test(password)) return toast.error('Password must include at least one uppercase letter.');
-    if (!/[0-9]/.test(password)) return toast.error('Password must include at least one number.');
+        if (!emailRegExp.test(email)) return toast.error('Please enter a valid email address.');
+        if (password.length < 8) return toast.error('Password must be at least 8 characters long.');
+        if (!/[a-z]/.test(password)) return toast.error('Password must include at least one lowercase letter.');
+        if (!/[A-Z]/.test(password)) return toast.error('Password must include at least one uppercase letter.');
+        if (!/[0-9]/.test(password)) return toast.error('Password must include at least one number.');
 
-    try {
-        setUserLoading(true);
+        try {
+            setUserLoading(true);
 
-        const result = await createUser(email, password);
-        const createdUser = result.user;
+            const result = await createUser(email, password);
+            const createdUser = result.user;
 
-        await updateUserProfile({ displayName: name, photoURL });
+            await updateUserProfile({ displayName: name, photoURL });
 
-        await result.user.reload();
-        setUser({ ...createdUser, displayName: name, photoURL });
+            await result.user.reload();
+            setUser({ ...createdUser, displayName: name, photoURL });
 
-        // ✅ Backend এ user পাঠানো
-        await axiosInstance.post("/add-user", {
-            email,
-            name,
-            role: "user"
-        });
+            await axiosInstance.post("/add-user", {
+                email,
+                name,
+                role: "user",
+                photoURL,
+                apartmentInfo: null,
+                acceptDate: null
+            });
 
-        toast.success('User created successfully!');
-        navigate('/');
-    } catch (error) {
-        toast.error(error.message);
-    } finally {
-        setUserLoading(false);
-    }
-};
+            toast.success('User created successfully!');
+            navigate('/');
+        } catch (error) {
+            toast.error(error.message);
+        } finally {
+            setUserLoading(false);
+        }
+    };
 
 
     if (userLoading) return <Spinner />;

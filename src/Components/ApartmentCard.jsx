@@ -20,6 +20,7 @@ const ApartmentCard = ({ apartment }) => {
 
         const agreementData = {
             userName: user.displayName,
+            photo:user.photoURL,
             userEmail: user.email,
             floorNo: apartment.floorNo,
             blockName: apartment.blockName,
@@ -28,6 +29,8 @@ const ApartmentCard = ({ apartment }) => {
             status: 'pending',
             requestedDate: new Date().toISOString(),
         };
+
+        console.log(user.photoURL);
 
         try {
             const res = await axiosInstance.post('/agreements', agreementData);

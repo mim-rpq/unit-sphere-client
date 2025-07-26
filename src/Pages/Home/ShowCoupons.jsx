@@ -1,17 +1,18 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import Spinner from "../Shared/Spinner";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
+
 import CouponCard from "./CouponCard";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 
 const ShowCoupons = () => {
-    const axiosSecure = useAxiosSecure();
+    const axiosPublic = useAxiosPublic();
 
     const {data: coupons = [],isLoading,isError,} = useQuery({
         queryKey: ["coupons"],
         queryFn: async () => {
-            const res = await axiosSecure.get("/coupons");
+            const res = await axiosPublic.get("/coupons/available");
             return res.data;
         },
     });
