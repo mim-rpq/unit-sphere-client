@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { useQuery } from '@tanstack/react-query';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { AuthContext } from '../../../../Provider/AuthContext';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import Spinner from '../../../Shared/Spinner';
@@ -24,7 +24,7 @@ const MakePaymentForm = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        navigate('/dashboard/payment-page', {
+        navigate('/dashboard/paymentPage', {
             state: {
                 agreement,
                 month: data.month,

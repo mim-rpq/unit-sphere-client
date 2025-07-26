@@ -17,6 +17,7 @@ import MemberProfile from "../Pages/DashBoard/Member/MemberProfile";
 import UserProfile from "../Pages/DashBoard/User/UserProfile";
 import Announcements from "../Pages/Shared/Announcements";
 import MakePaymentForm from "../Pages/DashBoard/Member/payment/MakePaymentForm";
+import PaymentPage from "../Pages/DashBoard/Member/payment/PaymentPage";
 
 
 
@@ -94,6 +95,10 @@ const router = createBrowserRouter([
             {
                 path:'makePayment',
                 element:<MakePaymentForm></MakePaymentForm>
+            },
+            {
+                path:'paymentPage',
+                element:<PaymentPage></PaymentPage>
             },
 
             // user routes 
