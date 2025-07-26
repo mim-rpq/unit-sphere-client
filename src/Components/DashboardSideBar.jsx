@@ -57,6 +57,14 @@ export default function DashboardSidebar() {
           label="My Profile"
         />
         <NavItem
+          to="/dashboard/makePayment"
+          label="Make payment"
+        />
+        <NavItem
+          to="/dashboard/memberProfile"
+          label="My Profile"
+        />
+        <NavItem
           to="/dashboard/announcements"
           label="Announcements"
         />

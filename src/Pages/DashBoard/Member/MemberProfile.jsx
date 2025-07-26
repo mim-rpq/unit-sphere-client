@@ -12,7 +12,7 @@ const MemberProfile = () => {
 
     const { data: profile, isLoading, error } = useQuery({
         queryKey: ['memberProfile'],
-        queryFn: () => axiosSecure.get('/member-profile').then(res => res.data),
+        queryFn: () => axiosSecure.get('/agreements/my').then(res => res.data),
     });
 
     if (isLoading) return <Spinner />;

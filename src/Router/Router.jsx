@@ -16,6 +16,7 @@ import ManageCoupons from "../Pages/DashBoard/Admin/ManageCoupons";
 import MemberProfile from "../Pages/DashBoard/Member/MemberProfile";
 import UserProfile from "../Pages/DashBoard/User/UserProfile";
 import Announcements from "../Pages/Shared/Announcements";
+import MakePaymentForm from "../Pages/DashBoard/Member/payment/MakePaymentForm";
 
 
 
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
             {
                 path:'announcements',
                 element:<Announcements></Announcements>
+            },
+            {
+                path:'makePayment',
+                element:<MakePaymentForm></MakePaymentForm>
             },
 
             // user routes 
