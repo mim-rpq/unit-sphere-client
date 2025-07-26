@@ -10,7 +10,7 @@ const MakeAnnouncement = () => {
         register, 
         handleSubmit, 
         reset, 
-        formState: { errors } // <-- get errors from RHF
+        formState: { errors } 
     } = useForm();
     const { userLoading } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();

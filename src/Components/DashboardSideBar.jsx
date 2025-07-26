@@ -56,6 +56,10 @@ export default function DashboardSidebar() {
           to="/dashboard/memberProfile"
           label="My Profile"
         />
+        <NavItem
+          to="/dashboard/announcements"
+          label="Announcements"
+        />
       </nav>
     );
 

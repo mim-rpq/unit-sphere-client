@@ -23,9 +23,13 @@ const AgreementRequests = () => {
 
   const handleAccept = (id, email) => {
     axiosSecure.patch(`/agreements/accept/${id}?email=${email}`)
-      .then(() => {
-        setRequests(prev => prev.filter(req => req._id !== id));
-        Swal.fire("Accepted", "User is now a member.", "success");
+      .then(res => {
+        if (res.data.success) {
+          setRequests(prev => prev.filter(req => req._id !== id));
+          Swal.fire("Accepted", "User is now a member.", "success");
+        } else {
+          Swal.fire("Error", res.data.message || "Failed to accept request", "error");
+        }
       })
       .catch(err => {
         console.error(err);

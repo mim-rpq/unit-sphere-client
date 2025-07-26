@@ -48,9 +48,7 @@ const Register = () => {
                 email,
                 name,
                 role: "user",
-                photoURL,
-                apartmentInfo: null,
-                acceptDate: null
+                photoURL
             });
 
             toast.success('User created successfully!');

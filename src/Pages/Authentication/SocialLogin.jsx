@@ -23,9 +23,7 @@ const SocialLogin = () => {
                     email: user.email,
                     name: user.displayName,
                     role: 'user',
-                    photoURL: user.photoURL,
-                    apartmentInfo: null,
-                    acceptDate: null
+                    photoURL: user.photoURL
                 };
 
                 axiosInstance.post("/add-user", userData)
