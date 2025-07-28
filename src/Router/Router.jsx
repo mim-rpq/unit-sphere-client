@@ -18,6 +18,8 @@ import UserProfile from "../Pages/DashBoard/User/UserProfile";
 import Announcements from "../Pages/Shared/Announcements";
 import MakePaymentForm from "../Pages/DashBoard/Member/payment/MakePaymentForm";
 import PaymentPage from "../Pages/DashBoard/Member/payment/PaymentPage";
+import PaymentHistory from "../Pages/DashBoard/Member/PaymentHistory";
+import DashboardHome from "../Pages/DashBoard/DashboardHome";
 
 
 
@@ -62,6 +64,10 @@ const router = createBrowserRouter([
         </PrivateRoute>,
         children:[
             {
+                index:true,
+                Component:DashboardHome
+            },
+            {
                 path:'adminProfile',
                 element:<AdminProfile></AdminProfile>
             },
@@ -99,6 +105,10 @@ const router = createBrowserRouter([
             {
                 path:'paymentPage',
                 element:<PaymentPage></PaymentPage>
+            },
+            {
+                path:'paymentHistory',
+                element:<PaymentHistory></PaymentHistory>
             },
 
             // user routes 

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router';
 import DashboardSidebar from '../Components/DashboardSideBar';
+import Logo from '../Pages/Shared/Logo';
+import Footer from '../Pages/Shared/Footer';
 
 const DashBoardLayout = () => {
     return (
-        <div className="drawer lg:drawer-open">
+        <div className="drawer lg:drawer-open bg-gradient-to-b  min-h-screen">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content flex flex-col ">
+            <div className="drawer-content  flex flex-col min-h-screen ">
 
                 {/* Navbar */}
                 <div className="navbar bg-base-300 w-full  lg:hidden">
@@ -28,17 +30,24 @@ const DashBoardLayout = () => {
                         </label>
                     </div>
                     <div className="mx-2 flex-1 px-2">Dashboard</div>
-                   
-                </div>
-                {/* Page content here */}
-                <Outlet></Outlet>
-                {/* Page content here */}
 
+                </div>
+                <div className="flex-grow">
+                    <Outlet />
+                </div>
+
+                {/* Footer */}
+                <footer className=" text-center p-4">
+                   <Footer/>
+                </footer>
             </div>
-            <div className="drawer-side">
+            <div className="drawer-side ">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className='menu bg-base-200 text-base-content min-h-full w-80 p-4'>
-                    <DashboardSidebar/>
+                <div className='menu bg-gradient-to-b from-indigo-100 to-purple-100 text-base-content min-h-full w-80 p-4'>
+                    <div className='mb-4'>
+                        <Logo></Logo>
+                    </div>
+                    <DashboardSidebar />
                 </div>
             </div>
         </div>

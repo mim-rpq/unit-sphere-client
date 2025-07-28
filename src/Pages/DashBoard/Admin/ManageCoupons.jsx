@@ -17,7 +17,7 @@ const ManageCoupons = () => {
     refetch,
   } = useQuery({
     queryKey: ["coupons"],
-    queryFn: () => 
+    queryFn: () =>
       axiosSecure.get("/coupons").then(res => res.data)
   });
 
@@ -28,6 +28,8 @@ const ManageCoupons = () => {
       ...data,
       discount: Number(data.discount),
       available: true,
+      expiresAt: new Date(data.expiresAt),
+
     };
     axiosSecure.post("/coupons", couponData)
       .then(res => {
@@ -174,6 +176,15 @@ const ManageCoupons = () => {
                   className="w-full border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
+              <div>
+                <label className="block text-sm font-medium mb-1">Expiry Date</label>
+                <input
+                  type="date"
+                  {...register("expiresAt", { required: true })}
+                  className="w-full border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+
               <div>
                 <label className="block text-sm font-medium mb-1">Description</label>
                 <textarea
