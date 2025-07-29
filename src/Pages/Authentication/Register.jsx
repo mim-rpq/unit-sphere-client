@@ -1,11 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router';
-
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../Provider/AuthContext';
 import Spinner from '../Shared/Spinner';
-import SocialLogin from './SocialLogin';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 
@@ -106,7 +104,7 @@ const Register = () => {
 
                         <button type='submit' className="btn mt-4 bg-primary outline-0 text-white hover:bg-secondary">Register</button>
 
-                        <SocialLogin />
+                        {/* <SocialLogin /> */}
 
                         <p className='text-primary font-semibold text-center mt-3'>
                             Already have an account? Please <Link to='/auth/login' className='text-secondary underline'>Login</Link>

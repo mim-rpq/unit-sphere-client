@@ -4,7 +4,6 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../Provider/AuthContext';
 import Spinner from '../Shared/Spinner';
-import SocialLogin from './SocialLogin';
 import { useForm } from 'react-hook-form';
 
 const Login = () => {
@@ -130,7 +129,7 @@ const Login = () => {
           </fieldset>
         </form>
 
-        <SocialLogin />
+        {/* <SocialLogin /> */}
 
         <p className="font-semibold text-center mt-3 text-primary">
           Don't have an account? Please{' '}
