@@ -8,7 +8,7 @@ const AboutBuilding = () => {
 
 
   return (
-    <section className="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 py-16 px-6 md:px-20">
+    <section className="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 py-12 px-6 md:px-20">
       <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl p-10 md:flex  md:flex-col-reverse lg:flex-row md:items-center md:gap-16">
         {/* Left text content */}
         <div className="md:flex-1">

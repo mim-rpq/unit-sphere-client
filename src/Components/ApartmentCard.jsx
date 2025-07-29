@@ -67,7 +67,7 @@ const ApartmentCard = ({ apartment }) => {
             />
             <div className="p-5 space-y-3">
                 <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-white bg-indigo-500 px-3 py-1 rounded-full">
+                    <span className="text-sm font-medium text-white bg-secondary px-3 py-1 rounded-full">
                         Block {apartment.blockName}
                     </span>
 
@@ -105,7 +105,7 @@ const ApartmentCard = ({ apartment }) => {
                     disabled={role === "admin" || apartment.availability !== "available"}
                     className={`w-full py-2 rounded-lg font-semibold transition duration-200 ${role === "admin" || apartment.availability !== "available"
                         ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                        : "bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700"
+                        : "bg-gradient-to-r from-primary to-secondary text-base-200 hover:from-secondary hover:to-primary"
                         }`}
                 >
                     {role === "admin" ? "You can't send request" : (apartment.availability !== "available" ? "Unavailable" : "Request Agreement")}

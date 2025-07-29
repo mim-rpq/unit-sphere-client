@@ -97,7 +97,9 @@ const Navbar = () => {
                 ) : (
                     <>
                         <Link to='/auth/login' className="">
-                            <FaUser className='text-gray-600 text-2xl' />
+                            <div className='rounded-full  p-2 bg-primary'>
+                                <FaUser className='text-base-200  text-2xl' />
+                            </div>
                         </Link>
                     </>
                 )}

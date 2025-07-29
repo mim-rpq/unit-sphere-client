@@ -15,12 +15,13 @@ import AgreementRequests from "../Pages/DashBoard/Admin/AgreementRequests";
 import ManageCoupons from "../Pages/DashBoard/Admin/ManageCoupons";
 import MemberProfile from "../Pages/DashBoard/Member/MemberProfile";
 import UserProfile from "../Pages/DashBoard/User/UserProfile";
-import Announcements from "../Pages/Shared/Announcements";
+// import Announcements from "../Pages/Shared/Announcements";
 import MakePaymentForm from "../Pages/DashBoard/Member/payment/MakePaymentForm";
 import PaymentPage from "../Pages/DashBoard/Member/payment/PaymentPage";
 import PaymentHistory from "../Pages/DashBoard/Member/PaymentHistory";
 import DashboardHome from "../Pages/DashBoard/DashboardHome";
 import AdminProfile from "../Pages/DashBoard/Admin/AdminProfile/AdminProfile";
+import Announcements from "../Pages/DashBoard/Announcements";
 
 
 

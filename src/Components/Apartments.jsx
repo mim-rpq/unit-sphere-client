@@ -58,7 +58,7 @@ const Apartments = () => {
             setMaxRent(inputMaxRent);
             setPage(1); 
           }}
-          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
+          className="bg-gradient-to-r from-primary to-secondary text-base-200 px-4 py-2 rounded"
         >
           Search
         </button>
