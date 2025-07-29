@@ -1,88 +1,63 @@
-# Unit Sphere 
 
-Unit Sphere is a modern, responsive React web application built with Vite, Tailwind CSS, Firebase, and Stripe.
+# 🏢 Unit Sphere - Apartment Rental Platform
 
-# Building Management System (BMS)
+Unit Sphere is a modern web-based apartment rental platform designed to help users find, explore, and apply for available apartments. The system supports authentication, role-based dashboards, booking requests, coupon-enabled payments, and more.
 
-A modern, full-stack web application for managing a single building's apartments, users, and operations — built with the **MERN stack**, Firebase, and Stripe.
+## 🌐 Live URL
 
----
-
-## Live Demo
-
-Check out the live version here: [Live Demo]( https://ph-assignments-5c5c6.web.app)
-
-##  Features
-
-- **Authentication & Role-based Access**
-  - Login and register with Firebase Authentication
-  - Admin, Member, and Regular User roles
-  - Protected routes and dashboards
-
--  **Apartment Management**
-  - View all available rooms
-  - Apply for an apartment with a request-based agreement system
-  - Admin can view and approve/reject agreements
-  - Dynamic apartment availability status
-
--  **Secure Payment System**
-  - Stripe integration
-  - Apply coupon codes for discounts
-  - Backend coupon validation to prevent abuse
-
-- **User Management**
-  - Admin can manage all users and promote them to members
-  - Members have extra privileges over regular users
-
--  **Announcements & Notices**
-  - Admin can post building-wide announcements
-
--  **Admin Dashboard**
-  - Profile view with:
-    - Name, Email, Profile Picture
-    - Total rooms and percentages of availability
-    - Total users and members count
-  - Full apartment and user management in one place
+🔗 [View Live Website](https://ph-assignments-5c5c6.web.app)
 
 ---
 
-##  Tech Stack
+## 🎯 Purpose
 
-- **Frontend**: React, Tailwind CSS, React Router, React Query, Axios
-- **Authentication**: Firebase Auth + Firebase Admin SDK (backend)
-- **Backend**: Node.js, Express.js, MongoDB
-- **Payment**: Stripe API
-- **Deployment**: Vercel (Client) & Render (Server)
+The main objective of Unit Sphere is to simplify apartment hunting and building management by providing a user-friendly, feature-rich web platform with:
+
+- Apartment listings
+- Role-based dashboard access (Admin, Member, User)
+- Booking and agreement management
+- Stripe-integrated rent payments with coupon validation
+- Real-time animations and interactive design
+
+---
+
+## 🚀 Key Features
+
+- 🔐 **Firebase Authentication** (Login, Register, Private Routes)
+- 🏘️ **Apartment Listings** with pagination, search, and filter
+- 📝 **Agreement Requests** by authenticated users
+- 💳 **Stripe Payment Integration** with coupon discount
+- 🛠️ **Role-Based Access Control** using Firebase Admin SDK
+- 📰 **Announcement System** for admins
+- 📱 **Responsive UI** using TailwindCSS + DaisyUI
+- 🎞️ **Carousel & Animation** using AOS and React-Responsive-Carousel
+- 🌍 **Interactive Maps** with Leaflet and React-Leaflet
 
 ---
 
-##  Environment Variables
+## 📦 NPM Packages Used
 
-Make sure to set these in `.env` for both client and server:
-
-###  Client:
-```
-VITE_API_BASE_URL=
-VITE_FIREBASE_API_KEY=...
-VITE_FIREBASE_AUTH_DOMAIN=...
-```
-
-###  Server:
-```
-PORT=5000
-MONGODB_URI=your_mongodb_uri
-STRIPE_SECRET_KEY=your_stripe_key
-FIREBASE_SERVICE_ACCOUNT=your_service_account_credentials
-JWT_SECRET=your_jwt_secret
-```
-
-## 🌐 Live Site
-
-🔗 [Visit Live Website]( https://ph-assignments-5c5c6.web.app)
-
----
+| Package                        | Description                            |
+|-------------------------------|----------------------------------------|
+| `react`                       | Core library for building UI           |
+| `react-router`                | Routing and navigation                 |
+| `firebase`                    | Auth, role management, and backend     |
+| `axios`                       | HTTP requests                          |
+| `@stripe/react-stripe-js`     | Stripe integration                     |
+| `@tanstack/react-query`       | Data fetching and caching              |
+| `aos`                         | Animate on scroll                      |
+| `react-icons`                 | Icon library                           |
+| `react-hook-form`             | Form handling                          |
+| `react-toastify`              | Notification system                    |
+| `sweetalert2`                 | Alert & confirmation modals            |
+| `tailwindcss` + `daisyui`     | Styling & UI components                |
+| `react-responsive-carousel`   | Banner carousel                        |
+| `leaflet` + `react-leaflet`   | Interactive maps                       |
 
 ---
 
 
 
+## 📜 License
+
+This project is licensed for educational and personal use. For commercial purposes, please contact the author.

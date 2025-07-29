@@ -20,7 +20,8 @@ const Banner = () => {
                     <div className="absolute inset-0 bg-black/60 bg-opacity-50"></div>
 
                     {/* Content */}
-                    <div className="relative z-10 text-center px-4">
+                    <div
+                        className="relative z-10 text-center px-4">
                         <h1 className="text-3xl md:text-5xl font-bold mb-4">Welcome to Unit Sphere</h1>
                         <p className="text-lg md:text-xl mb-6">Discover your dream home in just a few clicks. Explore modern, luxury, and affordable apartments all in one place — tailored to match your lifestyle and budget.</p>
                         <button className="bg-gradient-to-r from-secondary to-primary  text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition">Get Started</button>
