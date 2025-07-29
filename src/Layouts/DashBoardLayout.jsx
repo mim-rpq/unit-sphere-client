@@ -1,10 +1,11 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigation } from 'react-router';
 import DashboardSidebar from '../Components/DashboardSideBar';
 import Logo from '../Pages/Shared/Logo';
 import Footer from '../Pages/Shared/Footer';
 
 const DashBoardLayout = () => {
+    const navigation = useNavigation();
     return (
         <div className="drawer lg:drawer-open bg-gradient-to-b  min-h-screen">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -33,13 +34,16 @@ const DashBoardLayout = () => {
 
                 </div>
                 <div className="flex-grow  bg-black">
-                    <Outlet />
+                    {
+                        navigation.state === "loading" ? (
+                            <div className="flex justify-center items-center h-full">
+                                <Spinner />
+                            </div>
+                        ) : (
+                            <Outlet />
+                        )
+                    }
                 </div>
-
-                {/* Footer */}
-                {/* <footer className=" text-center  p-4">
-                   <Footer/>
-                </footer> */}
             </div>
             <div className="drawer-side ">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
