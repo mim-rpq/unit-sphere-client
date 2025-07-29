@@ -1,5 +1,3 @@
-// src/Pages/DashBoard/Admin/AdminProfile.jsx
-
 import React, { useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { AuthContext } from '../../../../Provider/AuthContext';
@@ -7,10 +5,6 @@ import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import Spinner from '../../../Shared/Spinner';
 import StatCard from './StatCard';
 import { FaCircleCheck } from 'react-icons/fa6';
-// import { AuthContext } from '../../../../Provider/AuthContext';
-// import useAxiosSecure from '../../../../hooks/useAxiosSecure';
-// import Spinner from '../../../Shared/Spinner';
-// import StatCard from '../../../components/StatCard'; 
 
 const AdminProfile = () => {
   const { user } = useContext(AuthContext);
@@ -79,7 +73,7 @@ const AdminProfile = () => {
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <StatCard title="Total Rooms" value={totalRooms} type="total" />
         <StatCard title="Available Rooms" value={`${availablePercent}%`} type="available" />
-        <StatCard title="Agreement Rooms" value={`${unavailablePercent}%`} type="unavailable" />
+        <StatCard title="UnAvailable Rooms" value={`${unavailablePercent}%`} type="unavailable" />
         <StatCard title="Users" value={usersCount} type="users" />
         <StatCard title="Members" value={membersCount} type="members" />
 
