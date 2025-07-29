@@ -32,14 +32,14 @@ const DashBoardLayout = () => {
                     <div className="mx-2 flex-1 px-2">Dashboard</div>
 
                 </div>
-                <div className="flex-grow">
+                <div className="flex-grow bg-black">
                     <Outlet />
                 </div>
 
                 {/* Footer */}
-                <footer className=" text-center p-4">
+                {/* <footer className=" text-center  p-4">
                    <Footer/>
-                </footer>
+                </footer> */}
             </div>
             <div className="drawer-side ">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>

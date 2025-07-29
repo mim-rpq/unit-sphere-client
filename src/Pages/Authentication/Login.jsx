@@ -51,7 +51,7 @@ const Login = () => {
   if (userLoading && user) return <Spinner />;
 
   return (
-    <div className="flex lg:flex-row flex-col justify-center min-h-screen my-12 md:my-20 lg:my-0 items-center">
+    <div className="m-5 flex justify-center min-h-screen my-6 md:my-20 lg:my-0 items-center">
       <div className="py-5 bg-white p-2 w-full max-w-md shadow-2xl">
         <h2 className="md:text-4xl text-2xl font-bold text-center py-5 text-primary">
           Please Login!

@@ -8,7 +8,7 @@ import NotFound from "../Pages/Error/NotFound";
 import Apartments from "../Components/Apartments";
 import PrivateRoute from "../Provider/PrivateRoute";
 import DashBoardLayout from "../Layouts/DashBoardLayout";
-import AdminProfile from "../Pages/DashBoard/Admin/AdminProfile";
+// import AdminProfile from "../Pages/DashBoard/Admin/AdminProfile";
 import ManageMembers from "../Pages/DashBoard/Admin/ManageMember/ManageMembers";
 import MakeAnnouncement from "../Pages/DashBoard/Admin/MakeAnnouncement";
 import AgreementRequests from "../Pages/DashBoard/Admin/AgreementRequests";
@@ -20,6 +20,7 @@ import MakePaymentForm from "../Pages/DashBoard/Member/payment/MakePaymentForm";
 import PaymentPage from "../Pages/DashBoard/Member/payment/PaymentPage";
 import PaymentHistory from "../Pages/DashBoard/Member/PaymentHistory";
 import DashboardHome from "../Pages/DashBoard/DashboardHome";
+import AdminProfile from "../Pages/DashBoard/Admin/AdminProfile/AdminProfile";
 
 
 

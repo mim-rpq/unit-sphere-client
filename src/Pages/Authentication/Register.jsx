@@ -64,7 +64,7 @@ const Register = () => {
     if (userLoading) return <Spinner />;
 
     return (
-        <div className='flex justify-center py-16 px-4 min-h-screen items-center'>
+        <div className='flex justify-center py-6 px-4 min-h-screen items-center'>
             <div className="bg-white border border-primary p-2 w-full max-w-md shadow-2xl">
                 <h2 className='md:text-3xl font-bold text-center py-3 text-primary'>Register now!</h2>
                 <form onSubmit={handleRegister} className="card-body">

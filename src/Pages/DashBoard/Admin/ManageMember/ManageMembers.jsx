@@ -16,9 +16,7 @@ const ManageMembers = () => {
         },
     });
 
-    if (isLoading){
-        <Spinner></Spinner>
-    };
+    if (isLoading) return <Spinner />;
     if (isError) return <p>Failed to load members.</p>;
 
     //  Filter only members
@@ -29,12 +27,12 @@ const ManageMembers = () => {
     return (
         <div className="p-4 ">
             {members.length === 0 ? (
-                <p>No members found.</p>
+                <p className='text-base-200'>No members found.</p>
             ) : <>
-            
-            <div className='lg:max-w-5xl mx-auto'>
-                <MemberTable members={members} refetch={refetch} ></MemberTable>
-            </div>
+
+                <div className='lg:max-w-5xl mx-auto'>
+                    <MemberTable members={members} refetch={refetch} ></MemberTable>
+                </div>
             </>}
         </div>
     );

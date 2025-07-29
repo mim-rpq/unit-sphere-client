@@ -5,11 +5,11 @@ import building from '../../assets/images/building.png';
 import 'aos/dist/aos.css';
 
 const AboutBuilding = () => {
- 
+
 
   return (
     <section className="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 py-16 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl p-10 md:flex md:items-center md:gap-16">
+      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl p-10 md:flex  md:flex-col-reverse lg:flex-row md:items-center md:gap-16">
         {/* Left text content */}
         <div className="md:flex-1">
           <div className="flex items-center text-indigo-600 mb-4 text-5xl">
@@ -45,8 +45,8 @@ const AboutBuilding = () => {
 
         {/* Right image */}
         <div
-          data-aos="fade-up"
-          className="hidden md:block md:flex-1"
+          data-aos=""
+          className="md:block md:flex-1"
         >
           <img
             src={building}

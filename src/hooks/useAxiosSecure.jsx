@@ -1,29 +1,62 @@
-
-import React, { useContext } from 'react';
-
 import axios from 'axios';
+import { useContext, useEffect } from 'react';
 import { AuthContext } from '../Provider/AuthContext';
 
 const axiosSecure = axios.create({
-    baseURL: `https://unit-sphere-server.vercel.app`
+  baseURL: "http://localhost:5000",
 });
 
 const useAxiosSecure = () => {
-    const { user } = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
 
-    // console.log(user.accessToken);
+  useEffect(() => {
+    const requestInterceptor = axiosSecure.interceptors.request.use((config) => {
+      if (user?.accessToken) {
+        config.headers.Authorization = `Bearer ${user.accessToken}`;
+      }
+      return config;
+    });
 
+    return () => {
+      axiosSecure.interceptors.request.eject(requestInterceptor);
+    };
+  }, [user]);
 
-    axiosSecure.interceptors.request.use(config => {
-        config.headers.Authorization = `Bearer ${user.accessToken}`
-        return config
-    }, error => {
-        return Promise.reject(error)
-    })
-
-    return axiosSecure
-
+  return axiosSecure;
 };
 
 export default useAxiosSecure;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import axios from 'axios';
+// import React, { useContext } from 'react';
+// import { AuthContext } from '../Provider/AuthContext';
+
+// const useAxiosSecure = () => {
+// const {user}=  useContext(AuthContext)
+
+// // console.log(user.accessToken);
+// const axiosSecure = axios.create({
+//     baseURL:"http://localhost:5000",
+//     headers:{
+//         Authorization:`Bearer ${user.accessToken}`
+//     }
+// })
+//     return axiosSecure
+    
+// };
+
+// export default useAxiosSecure;
 

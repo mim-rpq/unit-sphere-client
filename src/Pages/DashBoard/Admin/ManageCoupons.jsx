@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useQuery } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import { FiTrash2 } from "react-icons/fi";
+import { FiTag, FiTrash2 } from "react-icons/fi";
 import Swal from "sweetalert2";
 import Spinner from "../../Shared/Spinner";
 
@@ -95,12 +95,21 @@ const ManageCoupons = () => {
   }
 
   return (
-    <div className="p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Manage Coupons</h2>
+    <div className="p-6 mt-10">
+      <div className="flex flex-col lg:flex-row justify-between items-center mb-6">
+        <div className="mb-6 flex-1">
+          <h2 className="text-2xl justify-center  lg:justify-self-start font-bold text-secondary flex items-center gap-2">
+            <FiTag className="text-primary lg:text-3xl" />
+            Manage Coupons
+          </h2>
+          <p className="text-gray-200 mt-1 text-center md:text-left">
+            Create, view, and manage discount coupons for users. Customize offers to boost engagement and retention.
+          </p>
+        </div>
+
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-primary text-white px-4 py-2 rounded-lg shadow hover:bg-secondary transition"
+          className="bg-gradient-to-r from-secondary to-primary  text-base-200 px-4 py-2 rounded-lg shadow hover:bg-secondary cursor-pointer transition"
         >
           + Add Coupon
         </button>
@@ -111,9 +120,9 @@ const ManageCoupons = () => {
           <h1>No Coupons available. Add a coupon.</h1>
         </div>
       ) : (
-        <div className="overflow-x-auto rounded-lg shadow border">
-          <table className="min-w-full bg-white">
-            <thead className="bg-blue-50 text-gray-700">
+        <div className="overflow-x-auto  shadow border">
+          <table className="min-w-full ">
+            <thead className="bg-primary border border-secondary text-base-200">
               <tr>
                 <th className="p-3 text-left">Code</th>
                 <th className="p-3 text-left">Discount (%)</th>
@@ -124,11 +133,11 @@ const ManageCoupons = () => {
             </thead>
             <tbody>
               {coupons.map((coupon) => (
-                <tr key={coupon._id} className="border-t hover:bg-gray-50">
-                  <td className="p-3 font-bold">{coupon.code}</td>
+                <tr key={coupon._id} className="border border-secondary hover:bg-secondary">
+                  <td className="p-3 text-base-200 font-bold">{coupon.code}</td>
                   <td className="p-3 text-red-500">{coupon.discount}%</td>
-                  <td className="p-3">{coupon.description}</td>
-                  <td className="p-3 text-center">
+                  <td className="p-3 text-base-200">{coupon.description}</td>
+                  <td className="p-3 text-base-200 text-center">
                     <input
                       type="checkbox"
                       checked={coupon.available}
@@ -164,7 +173,7 @@ const ManageCoupons = () => {
                 <input
                   {...register("code", { required: true })}
                   placeholder="E.g. SUMMER20"
-                  className="w-full border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full border border-secondary px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
@@ -173,7 +182,7 @@ const ManageCoupons = () => {
                   type="number"
                   {...register("discount", { required: true, min: 1, max: 100 })}
                   placeholder="E.g. 15"
-                  className="w-full border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full border border-secondary px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
@@ -181,7 +190,7 @@ const ManageCoupons = () => {
                 <input
                   type="date"
                   {...register("expiresAt", { required: true })}
-                  className="w-full border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full border border-secondary px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -190,7 +199,7 @@ const ManageCoupons = () => {
                 <textarea
                   {...register("description")}
                   placeholder="Optional description"
-                  className="w-full border px-3 py-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full border border-secondary px-3 py-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary"
                   rows={3}
                 />
               </div>
@@ -199,13 +208,13 @@ const ManageCoupons = () => {
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 border rounded hover:bg-gray-100"
+                  className="px-4 py-2 border border-secondary rounded hover:bg-gray-100"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-primary text-white rounded hover:bg-secondary"
+                  className="px-4 py-2 bg-primary border-secondary text-white rounded hover:bg-secondary"
                 >
                   Submit
                 </button>
