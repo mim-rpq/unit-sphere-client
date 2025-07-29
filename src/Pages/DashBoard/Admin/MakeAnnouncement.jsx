@@ -81,7 +81,7 @@ const MakeAnnouncement = () => {
                     </div>
                     <button
                         type="submit"
-                        className="bg-gradient-to-r from-secondary to-primary  text-base-200 px-5 py-2 rounded hover:bg-secondary"
+                        className="bg-gradient-to-r from-secondary to-primary  text-white px-5 py-2 rounded hover:bg-secondary"
                     >
                         Post Announcement
                     </button>
