@@ -6,6 +6,7 @@ import ShowCoupons from './ShowCoupons';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import FeaturedApartments from '../../Components/FeaturedApartments';
+import Testimonials from './Testimonials';
 
 const Home = () => {
 
@@ -29,6 +30,7 @@ const Home = () => {
             </div>
             <ShowCoupons></ShowCoupons>
             <AboutTheBuilding></AboutTheBuilding>
+            <Testimonials></Testimonials>
             <ApartmentLocation></ApartmentLocation>
             
         </div>
