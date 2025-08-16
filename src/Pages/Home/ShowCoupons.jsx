@@ -24,7 +24,7 @@ const ShowCoupons = () => {
         return <p className="text-center text-red-600 font-semibold py-10">Failed to load coupons.</p>;
 
     return (
-        <div className=" bg-gradient-to-br from-blue-50 to-pink-50 py-12 px-4 md:px-8">
+        <div className=" max-w-7xl mx-auto bg-white py-12 px-4 md:px-8 rounded-lg">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 drop-shadow">
                  Grab Your Discount Coupons
             </h2>
