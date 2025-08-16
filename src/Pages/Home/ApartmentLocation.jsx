@@ -17,16 +17,16 @@ const ApartmentLocation = () => {
     const torontoPosition = [43.65107, -79.347015];
 
     return (
-        <section className="max-w-6xl mx-auto px-4 py-12">
+        <section className="max-w-7xl mx-auto  py-12">
             <h2 className="text-3xl font-bold text-center mb-6">
-                📍 Our Apartment Location – Toronto, Canada
+                 Our Apartment Location – Toronto, Canada
             </h2>
 
             <p className="text-center max-w-2xl mx-auto mb-8 text-gray-700">
                 Our apartment is located in the heart of Toronto, Canada. Easily accessible via public transportation with nearby amenities. Enjoy modern living with convenience.
             </p>
 
-            <div className="h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
+            <div className="h-[450px] w-full rounded-2xl overflow-hidden shadow-lg">
                 <MapContainer
                     center={torontoPosition}
                     zoom={13}
