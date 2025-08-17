@@ -6,6 +6,7 @@ import Logo from './Logo';
 import defaultUser from '../../assets/images/default_user.png';
 import { AuthContext } from '../../Provider/AuthContext';
 import { FaUser } from 'react-icons/fa';
+import ToggleTheme from '../../Components/ToggleTheme';
 
 const Navbar = () => {
   const { user, userLoading, logOut } = useContext(AuthContext);
@@ -162,11 +163,14 @@ const Navbar = () => {
             </div>
           ) : (
             <>
+            <div className='flex justify-center items-center gap-2'>
+                <ToggleTheme></ToggleTheme>
               <Link to="/auth/login" className="">
                 <div className="rounded-full p-2 bg-primary">
                   <FaUser className="text-base-200 text-2xl" />
                 </div>
               </Link>
+            </div>
             </>
           )}
         </div>

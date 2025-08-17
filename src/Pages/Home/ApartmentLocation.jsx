@@ -18,12 +18,12 @@ const ApartmentLocation = () => {
 
     return (
         <section className="   py-24 ">
-            <div className='max-w-7xl p-9 bg-white mx-auto rounded-lg '>
+            <div className='max-w-7xl p-9 bg-base-200 mx-auto rounded-lg '>
                 <h2 className="text-3xl font-bold text-center mb-6">
                     Our Apartment Location – Toronto, Canada
                 </h2>
 
-                <p className="text-center max-w-2xl mx-auto mb-8 text-gray-700">
+                <p className="text-center max-w-2xl mx-auto mb-8 text-secondary">
                     Our apartment is located in the heart of Toronto, Canada. Easily accessible via public transportation with nearby amenities. Enjoy modern living with convenience.
                 </p>
 

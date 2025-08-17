@@ -35,11 +35,22 @@ const Footer = () => {
         {/* Contact */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-100">Contact Us</h3>
-          <ul className="space-y-2">
-            <li className="flex items-center gap-2"><FaEnvelope className="text-indigo-500"/> info@unitsphere.com</li>
-            <li className="flex items-center gap-2"><FaPhoneAlt className="text-indigo-500"/> +880 1234 567890</li>
-            <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-indigo-500"/> Dhaka, Bangladesh</li>
-          </ul>
+          <ul className="space-y-2 text-gray-700">
+  <li className="flex items-center gap-2 text-white">
+    <FaEnvelope className="text-indigo-500 " />
+    info@unitsphere.com
+  </li>
+  <li className="flex items-center gap-2 text-white">
+    <FaPhoneAlt className="text-indigo-500" />
+    +1 416 123 4567
+  </li>
+  <li className="flex items-center gap-2 text-white">
+    <FaMapMarkerAlt className="text-indigo-500" />
+    Downtown Toronto, Canada
+  </li>
+</ul>
+
+
         </div>
 
         {/* Newsletter / CTA */}
