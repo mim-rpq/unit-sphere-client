@@ -1,6 +1,7 @@
 
 import { FaFacebookF, FaTwitter, FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import Logo from './Logo';
+import NewsletterSubscribe from './NewsletterSubscribe';
 
 const Footer = () => {
   return (
@@ -36,19 +37,19 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-100">Contact Us</h3>
           <ul className="space-y-2 text-gray-700">
-  <li className="flex items-center gap-2 text-white">
-    <FaEnvelope className="text-indigo-500 " />
-    info@unitsphere.com
-  </li>
-  <li className="flex items-center gap-2 text-white">
-    <FaPhoneAlt className="text-indigo-500" />
-    +1 416 123 4567
-  </li>
-  <li className="flex items-center gap-2 text-white">
-    <FaMapMarkerAlt className="text-indigo-500" />
-    Downtown Toronto, Canada
-  </li>
-</ul>
+            <li className="flex items-center gap-2 text-white">
+              <FaEnvelope className="text-indigo-500 " />
+              info@unitsphere.com
+            </li>
+            <li className="flex items-center gap-2 text-white">
+              <FaPhoneAlt className="text-indigo-500" />
+              +1 416 123 4567
+            </li>
+            <li className="flex items-center gap-2 text-white">
+              <FaMapMarkerAlt className="text-indigo-500" />
+              Downtown Toronto, Canada
+            </li>
+          </ul>
 
 
         </div>
@@ -58,14 +59,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4 text-gray-100">Subscribe</h3>
           <p className="text-gray-400 mb-4">Get latest updates about apartments and offers.</p>
           <div className="flex">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="w-full p-2 rounded-l-md outline-none bg-gray-800 text-gray-200 placeholder-gray-400"
-            />
-            <button className="bg-primary text-white px-4 rounded-r-md hover:bg-indigo-500 transition">
-              Subscribe
-            </button>
+          <NewsletterSubscribe></NewsletterSubscribe>
           </div>
         </div>
       </div>

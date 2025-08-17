@@ -6,6 +6,7 @@ import banner3 from '../../assets/images/trust.jpg'
 import banner4 from '../../assets/images/111.jpg'
 import banner5 from '../../assets/images/444.jpg'
 import banner6 from '../../assets/images/333.jpg'
+import { Link } from 'react-router';
 
 
 const Banner = () => {
@@ -24,7 +25,9 @@ const Banner = () => {
                         className="relative z-10 text-center px-4">
                         <h1 className="text-3xl md:text-5xl font-bold mb-4">Welcome to Unit Sphere</h1>
                         <p className="text-lg md:text-xl mb-6">Discover your dream home in just a few clicks. Explore modern, luxury, and affordable apartments all in one place — tailored to match your lifestyle and budget.</p>
-                        <button className="bg-gradient-to-r from-secondary to-primary  text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition">Get Started</button>
+                        <Link to='/apartments'>
+                            <button className="bg-gradient-to-r from-secondary to-primary cursor-pointer  text-white hover:bg-secondary px-6 py-2 rounded-md font-medium transition">Get Started</button>
+                        </Link>
                     </div>
                 </div>
 
@@ -68,7 +71,9 @@ const Banner = () => {
                     <div className="relative z-10 text-center px-4">
                         <h1 className="text-3xl md:text-5xl font-bold mb-4">Welcome to Unit Sphere</h1>
                         <p className="text-lg md:text-xl mb-6">Find your perfect apartment with us</p>
-                        <button className="bg-gradient-to-r from-secondary to-primary  text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition">Get Started</button>
+                        <Link to='/apartments'>
+                            <button className="bg-gradient-to-r cursor-pointer from-secondary to-primary  text-white hover:bg-secondary px-6 py-2 rounded-md font-medium transition">Get Started</button>
+                        </Link>
                     </div>
                 </div>
             </Carousel>
