@@ -22,6 +22,7 @@ import PaymentHistory from "../Pages/DashBoard/Member/PaymentHistory";
 import DashboardHome from "../Pages/DashBoard/DashboardHome";
 import AdminProfile from "../Pages/DashBoard/Admin/AdminProfile/AdminProfile";
 import Announcements from "../Pages/DashBoard/Announcements";
+import Contact from "../Components/Contact";
 
 
 
@@ -40,6 +41,12 @@ const router = createBrowserRouter([
             {
                 path:'/apartments',
                 element:<Apartments></Apartments>
+            },
+            {
+                path:'/contact',
+                element:<PrivateRoute>
+                    <Contact></Contact>
+                </PrivateRoute>
             }
         ]
     },

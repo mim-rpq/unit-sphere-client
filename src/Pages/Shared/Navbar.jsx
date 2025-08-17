@@ -68,16 +68,33 @@ const Navbar = () => {
           Apartments
         </NavLink>
       </li>
+        {/* Contact link only if user is logged in */}
+    {user && (
+      <li className="mr-4">
+        <NavLink
+          className={({ isActive }) =>
+            `${
+              isActive
+                ? 'text-secondary border-b-2 pb-2'
+                : 'text-primary hover:border-b-2 border-primary pb-2'
+            }`
+          }
+          to="/contact"
+        >
+          Contact
+        </NavLink>
+      </li>
+    )}
     </>
   );
 
   return (
     <div
-      className={`fixed top-0 w-full h-[80px] transition-all duration-300 z-50 
+      className={`fixed top-0 w-full h-[80px] transition-all duration-300 z-9999 
         ${
           isScrolled
-            ? 'backdrop-blur-md bg-white/70 shadow-md' // scroll করলে blur
-            : 'bg-white shadow-md' // একদম top এ white
+            ? 'backdrop-blur-md bg-white/70 shadow-md' 
+            : 'bg-white shadow-md' 
         }`}
     >
       {/* Inner container with max-w-7xl */}
