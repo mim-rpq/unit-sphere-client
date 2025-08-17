@@ -1,5 +1,6 @@
 import React from "react";
 import ApartmentCard from "./ApartmentCard";
+import { Link } from "react-router";
 
 const FeaturedApartments = ({ apartments }) => {
   return (
@@ -14,7 +15,9 @@ const FeaturedApartments = ({ apartments }) => {
         ))}
       </div>
       <div className="flex justify-center my-9">
-        <button className="bg-primary text-white btn">View All Apartment</button>
+        <Link to='/apartments'>
+          <button className="bg-primary text-white btn">View All Apartment</button>
+        </Link>
       </div>
     </section>
   );
