@@ -18,7 +18,7 @@ const Testimonials = () => {
   if (isLoading) return <p>Loading testimonials...</p>;
 
   return (
-    <section className="mt-24 py-24 bg-white ">
+    <section className="mt-24 py-24 bg-white/70 ">
       {/* Section background color added via bg-blue-50 */}
       <h2 className="text-3xl font-bold text-center mb-6">Residents’ Feedback</h2>
       <div className="max-w-7xl mx-auto">

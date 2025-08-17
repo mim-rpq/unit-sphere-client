@@ -27,12 +27,13 @@ const ApartmentLocation = () => {
                     Our apartment is located in the heart of Toronto, Canada. Easily accessible via public transportation with nearby amenities. Enjoy modern living with convenience.
                 </p>
 
-                <div className="h-[450px] w-full rounded-2xl overflow-hidden shadow-lg">
+                <div className="h-[450px]  w-full rounded-2xl overflow-hidden shadow-lg">
                     <MapContainer
+                    
                         center={torontoPosition}
                         zoom={13}
                         scrollWheelZoom={false}
-                        className="h-full w-full"
+                        className="h-full  w-full"
                     >
                         <TileLayer
                             attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'

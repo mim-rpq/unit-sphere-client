@@ -11,7 +11,7 @@ import banner6 from '../../assets/images/333.jpg'
 const Banner = () => {
     return (
         <div className=''>
-            <Carousel autoPlay infiniteLoop showThumbs={false} interval={2000}>
+            <Carousel autoPlay infiniteLoop showThumbs={false} interval={3000}>
                 <div
                     className="h-[500px] md:h-[600px] lg:h-[700px] bg-cover bg-center flex items-center justify-center text-white relative"
                     style={{ backgroundImage: `url(${banner1})` }}

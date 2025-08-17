@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/L.png'
 import { Link } from 'react-router';
 
 const Logo = () => {
     return (
         <Link to='/'>
             <div className='flex items-center gap-1'>
-                <img src={logo} alt="" />
-                <h1 className="text-2xl text-secondary  md:text-3xl font-black">Unit<span className='text-3xl md:text-5xl font-black text-primary'>S</span>phere</h1>
+                <img src={logo} className='h-16 w-16' alt="" />
+                <h1 className="text-2xl text-secondary  md:text-3xl font-black">UnitSphere</h1>
 
             </div>
         </Link>

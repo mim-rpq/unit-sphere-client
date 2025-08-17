@@ -12,7 +12,7 @@ const RootLayout = () => {
             <header>
                 <Navbar></Navbar>
             </header>
-            <main className='min-h-[calc(100vh-380px)]  '>
+            <main className='min-h-[calc(100vh-470px)] mt-[80px] '>
                 <section>
                     {
                         navigation.state==='loading'?(

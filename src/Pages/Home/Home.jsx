@@ -11,6 +11,8 @@ import Testimonials from './Testimonials';
 // import apartmentBg from '../../assets/images/appartment.jpg';
 // import apartmentBg2 from '../../assets/images/apar.jpg';
 import apartmentBg3 from '../../assets/images/Ap.jpg';
+import Amenities from './Amenities';
+import HowItWorks from './HowItWorks';
 
 const Home = () => {
   const axiosSecure = useAxiosSecure();
@@ -35,8 +37,10 @@ const Home = () => {
           <FeaturedApartments apartments={apartments} />
         </div>
       </div>
+      <HowItWorks></HowItWorks>
       <ShowCoupons />
       <AboutTheBuilding />
+      <Amenities></Amenities>
       <Testimonials />
       <ApartmentLocation />
     </div>
