@@ -16,6 +16,7 @@ const NewsletterSubscribe = () => {
         reset();
       }
     } catch (error) {
+      console.log(error);
       Swal.fire("Oops!", "Something went wrong. Try again!", "error");
     }
   };

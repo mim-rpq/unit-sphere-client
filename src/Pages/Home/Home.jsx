@@ -8,11 +8,10 @@ import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import FeaturedApartments from '../../Components/FeaturedApartments';
 import Testimonials from './Testimonials';
-// import apartmentBg from '../../assets/images/appartment.jpg';
-// import apartmentBg2 from '../../assets/images/apar.jpg';
 import apartmentBg3 from '../../assets/images/Ap.jpg';
 import Amenities from './Amenities';
 import HowItWorks from './HowItWorks';
+import Spinner from '../Shared/Spinner';
 
 const Home = () => {
   const axiosSecure = useAxiosSecure();
@@ -24,7 +23,7 @@ const Home = () => {
     },
   });
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Spinner></Spinner>;
 
   return (
     <div

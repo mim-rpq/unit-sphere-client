@@ -23,6 +23,8 @@ import DashboardHome from "../Pages/DashBoard/DashboardHome";
 import AdminProfile from "../Pages/DashBoard/Admin/AdminProfile/AdminProfile";
 import Announcements from "../Pages/DashBoard/Announcements";
 import Contact from "../Components/Contact";
+import AboutUs from "../Pages/AboutUs/AboutUs";
+import FAQ from "../Pages/FAQ/Faq";
 
 
 
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
             {
                 path:'/apartments',
                 element:<Apartments></Apartments>
+            },
+            {
+                path:'/aboutUs',
+                element:<AboutUs></AboutUs>
+            },
+            {
+                path:'/faq',
+                element:<FAQ></FAQ>
             },
             {
                 path:'/contact',

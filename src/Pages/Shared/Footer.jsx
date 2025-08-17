@@ -59,7 +59,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4 text-gray-100">Subscribe</h3>
           <p className="text-gray-400 mb-4">Get latest updates about apartments and offers.</p>
           <div className="flex">
-          <NewsletterSubscribe></NewsletterSubscribe>
+            <NewsletterSubscribe></NewsletterSubscribe>
           </div>
         </div>
       </div>

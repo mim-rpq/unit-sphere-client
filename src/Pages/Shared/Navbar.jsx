@@ -12,8 +12,8 @@ const Navbar = () => {
   const { user, userLoading, logOut } = useContext(AuthContext);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
-//   const location = useLocation();
-//   const isHome = location.pathname === '/';
+  //   const location = useLocation();
+  //   const isHome = location.pathname === '/';
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleLogOut = () => {
@@ -44,10 +44,9 @@ const Navbar = () => {
       <li className="mr-4">
         <NavLink
           className={({ isActive }) =>
-            `${
-              isActive
-                ? 'text-secondary border-b-2 pb-2'
-                : 'text-primary hover:border-b-2 border-primary pb-2'
+            `${isActive
+              ? 'text-secondary border-b-2 pb-2'
+              : 'text-primary hover:border-b-2 border-primary pb-2'
             }`
           }
           to="/"
@@ -58,10 +57,9 @@ const Navbar = () => {
       <li className="mr-4">
         <NavLink
           className={({ isActive }) =>
-            `${
-              isActive
-                ? 'text-secondary border-b-2 pb-2'
-                : 'text-primary hover:border-b-2 border-primary pb-2'
+            `${isActive
+              ? 'text-secondary border-b-2 pb-2'
+              : 'text-primary hover:border-b-2 border-primary pb-2'
             }`
           }
           to="/apartments"
@@ -69,33 +67,57 @@ const Navbar = () => {
           Apartments
         </NavLink>
       </li>
-        {/* Contact link only if user is logged in */}
-    {user && (
       <li className="mr-4">
         <NavLink
           className={({ isActive }) =>
-            `${
-              isActive
-                ? 'text-secondary border-b-2 pb-2'
-                : 'text-primary hover:border-b-2 border-primary pb-2'
+            `${isActive
+              ? 'text-secondary border-b-2 pb-2'
+              : 'text-primary hover:border-b-2 border-primary pb-2'
             }`
           }
-          to="/contact"
+          to="/faq"
         >
-          Contact
+          FAQ
         </NavLink>
       </li>
-    )}
+      <li className="mr-4">
+        <NavLink
+          className={({ isActive }) =>
+            `${isActive
+              ? 'text-secondary border-b-2 pb-2'
+              : 'text-primary hover:border-b-2 border-primary pb-2'
+            }`
+          }
+          to="/aboutUs"
+        >
+          AboutUs 
+        </NavLink>
+      </li>
+      {/* Contact link only if user is logged in */}
+      {user && (
+        <li className="mr-4">
+          <NavLink
+            className={({ isActive }) =>
+              `${isActive
+                ? 'text-secondary border-b-2 pb-2'
+                : 'text-primary hover:border-b-2 border-primary pb-2'
+              }`
+            }
+            to="/contact"
+          >
+            Contact
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
   return (
     <div
       className={`fixed top-0 w-full h-[80px] transition-all duration-300 z-9999 
-        ${
-          isScrolled
-            ? 'backdrop-blur-md bg-white/70 shadow-md' 
-            : 'bg-white shadow-md' 
+        ${isScrolled
+          ? 'backdrop-blur-md bg-white/70 shadow-md'
+          : 'bg-white shadow-md'
         }`}
     >
       {/* Inner container with max-w-7xl */}
@@ -163,14 +185,14 @@ const Navbar = () => {
             </div>
           ) : (
             <>
-            <div className='flex justify-center items-center gap-2'>
+              <div className='flex justify-center items-center gap-2'>
                 <ToggleTheme></ToggleTheme>
-              <Link to="/auth/login" className="">
-                <div className="rounded-full p-2 bg-primary">
-                  <FaUser className="text-base-200 text-2xl" />
-                </div>
-              </Link>
-            </div>
+                <Link to="/auth/login" className="">
+                  <div className="rounded-full p-2 bg-primary">
+                    <FaUser className="text-base-200 text-2xl" />
+                  </div>
+                </Link>
+              </div>
             </>
           )}
         </div>
