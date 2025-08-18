@@ -47,7 +47,7 @@ const DashBoardLayout = () => {
             </div>
             <div className="drawer-side ">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className='menu bg-gradient-to-b from-indigo-100 to-purple-100 text-base-content min-h-full w-80 p-4'>
+                <div className='menu bg-gray-900 text-base-content min-h-full w-80 p-4'>
                     <div className='mb-4'>
                         <Logo></Logo>
                     </div>

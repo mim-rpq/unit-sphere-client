@@ -29,6 +29,7 @@ export default function DashboardSidebar() {
       <nav className="flex flex-col gap-4">
         <NavItem to="/dashboard/adminProfile" icon={<MdPerson />} label="My Profile" />
         <NavItem to="/dashboard/manageMembers" icon={<MdPeople />} label="All Members" />
+         <NavItem to="/dashboard/overview" icon={<MdPeople />} label="Overview" />
         <NavItem to="/dashboard/makeAnnouncement" icon={<HiOutlineSpeakerphone />} label="Announcement" />
         <NavItem to="/dashboard/agreementRequests" icon={<MdDashboard />} label="All Requests" />
         <NavItem to="/dashboard/manageCoupons" icon={<MdLocalOffer />} label="All Coupons" />
@@ -39,6 +40,7 @@ export default function DashboardSidebar() {
     return (
       <nav className="flex flex-col gap-4">
         <NavItem to="/dashboard/memberProfile" icon={<MdPerson />} label="My Profile" />
+         <NavItem to="/dashboard/overview" icon={<MdPeople />} label="Overview" />
         <NavItem to="/dashboard/makePayment" icon={<MdPayment />} label="Make Payment" />
         <NavItem to="/dashboard/paymentHistory" icon={<MdHistory />} label="Payment History" />
         <NavItem to="/dashboard/announcements" icon={<MdAnnouncement />} label="Announcements" />

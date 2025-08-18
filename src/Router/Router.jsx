@@ -25,6 +25,7 @@ import Announcements from "../Pages/DashBoard/Announcements";
 import Contact from "../Components/Contact";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import FAQ from "../Pages/FAQ/Faq";
+import DashboardStats from "../Pages/DashBoard/Admin/AdminProfile/DashboardStats";
 
 
 
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
             {
                 path:'adminProfile',
                 element:<AdminProfile></AdminProfile>
+            },
+              {
+                path:'overview',
+                element:<DashboardStats></DashboardStats>
             },
             {
                 path:'manageMembers',

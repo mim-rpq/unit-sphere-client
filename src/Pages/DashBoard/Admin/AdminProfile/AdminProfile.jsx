@@ -1,82 +1,58 @@
+
+// AdminProfile.jsx
 import React, { useContext } from 'react';
-import { useQuery } from '@tanstack/react-query';
+
+import { FaCircleCheck,   FaEnvelope, FaPhone } from 'react-icons/fa6';
+import { FaMapMarker } from 'react-icons/fa';
 import { AuthContext } from '../../../../Provider/AuthContext';
-import useAxiosSecure from '../../../../hooks/useAxiosSecure';
-import Spinner from '../../../Shared/Spinner';
-import StatCard from './StatCard';
-import { FaCircleCheck } from 'react-icons/fa6';
 
 const AdminProfile = () => {
   const { user } = useContext(AuthContext);
-  const axiosSecure = useAxiosSecure();
 
-  // Fetch rooms stats
-  const {
-    data: roomsData,
-    isLoading: roomsLoading,
-    error: roomsError,
-  } = useQuery({
-    queryKey: ['roomsStats'],
-    queryFn: () => axiosSecure.get('/rooms/stats').then(res => res.data),
-  });
-
-  // Fetch users count
-  const {
-    data: usersData,
-    isLoading: usersLoading,
-    error: usersError,
-  } = useQuery({
-    queryKey: ['usersCount'],
-    queryFn: () => axiosSecure.get('/users/count').then(res => res.data),
-  });
-
-  // Fetch members count
-  const {
-    data: membersData,
-    isLoading: membersLoading,
-    error: membersError,
-  } = useQuery({
-    queryKey: ['membersCount'],
-    queryFn: () => axiosSecure.get('/members/count').then(res => res.data),
-  });
-
-  if (roomsLoading || usersLoading || membersLoading) return <Spinner />;
-  if (roomsError || usersError || membersError)
-    return <p className="text-red-500">Error loading data</p>;
-
-  const totalRooms = roomsData?.total || 0;
-  const availableRooms = roomsData?.available || 0;
-  const unavailableRooms = roomsData?.unavailable || 0;
-  const usersCount = usersData?.count || 0;
-  const membersCount = membersData?.count || 0;
-
-  const availablePercent = totalRooms ? ((availableRooms / totalRooms) * 100).toFixed(1) : 0;
-  const unavailablePercent = totalRooms ? ((unavailableRooms / totalRooms) * 100).toFixed(1) : 0;
+  // Dummy data for address and phone since database doesn't have them
+  const address = 'Toronto, Canada';
+  const phone = '+1 416-123-4567';
 
   return (
-    <div className="md:max-w-4xl my-5 mx-auto p-12 mt-7 bg-gradient-to-r from-black to-primary shadow rounded-2xl border-l-4 border-2 border-secondary border-r-0 text-white">
-      <div className="flex items-center space-x-6">
+    <div className="max-w-4xl mx-auto mt-8 p-10 bg-gradient-to-r from-gray-900 to-primary shadow-2xl rounded-3xl border-l-4 border-secondary text-white">
+      {/* Profile Header */}
+      <div className="flex flex-col md:flex-row items-center gap-6">
         <img
           src={user.photoURL}
           alt={user.displayName}
-          className="w-24 h-24 border-2 p-1 border-secondary rounded-full object-cover"
+          className="w-28 h-28 border-4 border-secondary rounded-full object-cover"
         />
-        <div>
-          <div className='flex gap-3 items-center'>
-            <h2 className="text-2xl font-semibold">{user.displayName} </h2>
-            <FaCircleCheck className=' text-secondary' />
+        <div className="flex-1">
+          <div className="flex items-center gap-3">
+            <h2 className="text-3xl font-bold">{user.displayName}</h2>
+            <FaCircleCheck className="text-secondary text-xl" />
           </div>
-          <p className="text-primary px-3 rounded-full bg-gray-200 ">{user.email}</p>
+          <p className="flex items-center gap-2 text-gray-200 mt-2">
+            <FaEnvelope className="text-primary" /> {user.email}
+          </p>
+          <p className="flex items-center gap-2 text-gray-200 mt-1">
+            <FaPhone className="text-primary" /> {phone}
+          </p>
+          <p className="flex items-center gap-2 text-gray-200 mt-1">
+            <FaMapMarker className="text-primary" /> {address}
+          </p>
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <StatCard title="Total Rooms" value={totalRooms} type="total" />
-        <StatCard title="Available Rooms" value={`${availablePercent}%`} type="available" />
-        <StatCard title="UnAvailable Rooms" value={`${unavailablePercent}%`} type="unavailable" />
-        <StatCard title="Users" value={usersCount} type="users" />
-        <StatCard title="Members" value={membersCount} type="members" />
-
+      {/* Info Cards */}
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-gray-800 p-5 rounded-xl text-center shadow-md hover:scale-105 transition-transform">
+          <h3 className="text-lg text-gray-300">Role</h3>
+          <p className="text-xl font-bold mt-2">Admin</p>
+        </div>
+        <div className="bg-gray-800 p-5 rounded-xl text-center shadow-md hover:scale-105 transition-transform">
+          <h3 className="text-lg text-gray-300">Location</h3>
+          <p className="text-xl font-bold mt-2">{address}</p>
+        </div>
+        <div className="bg-gray-800 p-5 rounded-xl text-center shadow-md hover:scale-105 transition-transform">
+          <h3 className="text-lg text-gray-300">Contact</h3>
+          <p className="text-xl font-bold mt-2">{phone}</p>
+        </div>
       </div>
     </div>
   );
