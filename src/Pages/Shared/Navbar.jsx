@@ -90,7 +90,7 @@ const Navbar = () => {
           }
           to="/aboutUs"
         >
-          AboutUs 
+          AboutUs
         </NavLink>
       </li>
       {/* Contact link only if user is logged in */}
@@ -146,6 +146,7 @@ const Navbar = () => {
             >
               {links}
             </ul>
+
           </div>
           <Logo />
         </div>
@@ -155,6 +156,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
+          <div className='mr-2'>
+            <ToggleTheme></ToggleTheme>
+          </div>
           {!userLoading && user ? (
             <div className="relative">
               <img
@@ -186,7 +190,7 @@ const Navbar = () => {
           ) : (
             <>
               <div className='flex justify-center items-center gap-2'>
-                <ToggleTheme></ToggleTheme>
+
                 <Link to="/auth/login" className="">
                   <div className="rounded-full p-2 bg-primary">
                     <FaUser className="text-base-200 text-2xl" />
@@ -195,6 +199,8 @@ const Navbar = () => {
               </div>
             </>
           )}
+
+
         </div>
       </div>
     </div>

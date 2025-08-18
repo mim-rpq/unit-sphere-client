@@ -78,6 +78,7 @@ const DashboardStats = () => {
 
   return (
     <div className="md:max-w-5xl my-5 mx-auto p-8 grid grid-cols-1 gap-8">
+        <h1 className='text-center md:text-xl text-white  font-bold mb-4 lg:text-3xl'>Overview</h1>
       {/* Stat Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <StatCard title="Total Rooms" value={totalRooms} type="total" />
@@ -87,9 +88,10 @@ const DashboardStats = () => {
         <StatCard title="Members" value={membersCount} type="members" />
       </div>
 
+    <h1 className='text-center mb-2 mt-12 text-white font-bold lg:text-xl'>Room Status</h1>
       {/* Pie Chart for Rooms */}
-      <div className="bg-white p-6 rounded-xl shadow">
-        <h3 className="text-xl font-semibold mb-4">Rooms Status</h3>
+      <div className=" bg-transparent text-white border-r-4 border-l-0 border-[#BD00DD] rounded-xl shadow-md p-5 border hover:shadow-lg transition-all">
+      
         <ResponsiveContainer width="100%" height={250}>
           <PieChart>
             <Pie
@@ -112,8 +114,9 @@ const DashboardStats = () => {
       </div>
 
       {/* Bar Chart for Users & Members */}
-      <div className="bg-white p-6 rounded-xl shadow">
-        <h3 className="text-xl font-semibold mb-4">Users & Members</h3>
+     < h1 className='text-center mb-2 mt-12 text-white font-bold lg:text-xl'>Users & Members</h1>
+      <div className=" bg-transparent text-white border-r-4 border-l-0 border-[#BD00DD] rounded-xl shadow-md p-5 border hover:shadow-lg transition-all">
+
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={userMemberData}>
             <XAxis dataKey="name" />

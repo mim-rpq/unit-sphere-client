@@ -26,7 +26,7 @@ const MemberProfile = () => {
     return (
         <div
 
-            className="m-7 max-w-3xl bg-purple-50 p-6 rounded-lg shadow-lg font-sans"
+            className="m-7 max-w-3xl   bg-transparent text-white border-r-4 border-l-0 border-[#BD00DD] rounded-xl shadow-md p-5 border hover:shadow-lg transition-all"
         >
             <div>
                 {/* Profile Picture and Name */}
@@ -39,7 +39,7 @@ const MemberProfile = () => {
                     <h2 className="text-2xl font-bold text-primary">{profile.fullName}</h2>
                     <div className="flex items-center text-sm text-gray-600 space-x-1">
                         <MdEmail className="text-primary" />
-                        <span>{profile.emailAddress}</span>
+                        <span className='text-white'>{profile.emailAddress}</span>
                     </div>
                 </div>
 

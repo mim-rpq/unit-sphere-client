@@ -10,8 +10,8 @@ export default function DashboardSidebar() {
       to={to}
       className={({ isActive }) =>
         `flex items-center gap-3 px-4 py-2 rounded-lg font-medium ${isActive
-          ? "bg-blue-100 text-blue-600"
-          : "text-gray-700 hover:bg-gray-200"
+          ? "bg-purple-100 text-primary"
+          : " hover:bg-gray-500 "
         }`
       }
     >

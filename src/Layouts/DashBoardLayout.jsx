@@ -12,7 +12,7 @@ const DashBoardLayout = () => {
             <div className="drawer-content  flex flex-col min-h-screen ">
 
                 {/* Navbar */}
-                <div className="navbar bg-base-300 w-full  lg:hidden">
+                <div className="navbar bg-base-200 w-full  lg:hidden">
                     <div className="flex-none lg:hidden">
                         <label htmlFor="my-drawer-2" aria-label="open sidebar" className="btn btn-square btn-ghost">
                             <svg
@@ -47,7 +47,7 @@ const DashBoardLayout = () => {
             </div>
             <div className="drawer-side ">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className='menu bg-gray-900 text-base-content min-h-full w-80 p-4'>
+                <div className='menu bg-base-200 text-base-content min-h-full w-80 p-4'>
                     <div className='mb-4'>
                         <Logo></Logo>
                     </div>

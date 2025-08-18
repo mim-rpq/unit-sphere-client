@@ -25,10 +25,10 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <div className="py-20 bg-white mb-24">
+    <div className="py-20 bg-base-200 mb-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Title */}
-        <h2 className="text-3xl font-bold text-center text-primary mb-12">
+        <h2 className="text-3xl font-bold text-center  mb-12">
           How It Works
         </h2>
 

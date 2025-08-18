@@ -27,7 +27,7 @@ const UserProfile = () => {
     );
 
   return (
-    <div className="m-7 max-w-3xl bg-purple-50 p-6 rounded-lg shadow-lg font-sans">
+    <div className="m-7 max-w-3xl   bg-transparent text-white border-r-4 border-l-0 border-[#BD00DD] rounded-xl shadow-md p-5 border hover:shadow-lg transition-all">
       {/* Profile Picture and Name */}
       <div className="flex flex-col items-center space-y-3">
         {userData?.photoURL ? (
@@ -44,7 +44,7 @@ const UserProfile = () => {
         <h2 className="text-2xl font-bold text-primary">{userData?.name}</h2>
         <div className="flex items-center text-sm text-gray-600 space-x-1">
           <MdEmail className="text-primary" />
-          <span>{userData?.email}</span>
+          <span className='text-white'>{userData?.email}</span>
         </div>
       </div>
 

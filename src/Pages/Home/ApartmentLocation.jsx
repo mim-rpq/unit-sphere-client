@@ -23,7 +23,7 @@ const ApartmentLocation = () => {
                     Our Apartment Location – Toronto, Canada
                 </h2>
 
-                <p className="text-center max-w-2xl mx-auto mb-8 text-secondary">
+                <p className="text-center max-w-2xl mx-auto mb-8 ">
                     Our apartment is located in the heart of Toronto, Canada. Easily accessible via public transportation with nearby amenities. Enjoy modern living with convenience.
                 </p>
 

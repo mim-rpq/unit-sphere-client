@@ -35,9 +35,9 @@ const amenitiesList = [
 
 const Amenities = () => {
     return (
-        <div className="py-16 bg-base-200 mt-24">
-            <div className="max-w-7xl mx-auto px-6">
-                <h2 className="text-3xl font-bold text-center mb-12 text-primary">
+        <div className="py-16  mt-24">
+            <div className="max-w-7xl bg-base-200 p-5 rounded-lg mx-auto px-6">
+                <h2 className="text-3xl font-bold text-center mb-12 ">
                     Amenities & Facilities
                 </h2>
 

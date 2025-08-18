@@ -6,7 +6,7 @@ import NewsletterSubscribe from './NewsletterSubscribe';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-200 py-16">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
         {/* Logo & Tagline */}
         <div className="flex flex-col items-center md:items-start">
@@ -58,7 +58,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-100">Subscribe</h3>
           <p className="text-gray-400 mb-4">Get latest updates about apartments and offers.</p>
-          <div className="flex">
+          <div className="flex ">
             <NewsletterSubscribe></NewsletterSubscribe>
           </div>
         </div>

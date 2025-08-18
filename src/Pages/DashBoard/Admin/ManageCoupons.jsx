@@ -124,20 +124,20 @@ const ManageCoupons = () => {
           <table className="min-w-full ">
             <thead className="bg-primary border border-secondary text-base-200">
               <tr>
-                <th className="p-3 text-left">Code</th>
-                <th className="p-3 text-left">Discount (%)</th>
-                <th className="p-3 text-left">Description</th>
-                <th className="p-3 text-left">Available</th>
-                <th className="p-3 text-left">Action</th>
+                <th className="p-3 text-white text-left">Code</th>
+                <th className="p-3 text-white text-left">Discount (%)</th>
+                <th className="p-3 text-white text-left">Description</th>
+                <th className="p-3 text-white text-left">Available</th>
+                <th className="p-3 text-white text-left">Action</th>
               </tr>
             </thead>
             <tbody>
               {coupons.map((coupon) => (
                 <tr key={coupon._id} className="border border-secondary hover:bg-secondary">
-                  <td className="p-3 text-base-200 font-bold">{coupon.code}</td>
-                  <td className="p-3 text-red-500">{coupon.discount}%</td>
-                  <td className="p-3 text-base-200">{coupon.description}</td>
-                  <td className="p-3 text-base-200 text-center">
+                  <td className="p-3 text-white   font-bold">{coupon.code}</td>
+                  <td className="p-3  text-red-500">{coupon.discount}%</td>
+                  <td className="p-3 text-white ">{coupon.description}</td>
+                  <td className="p-3 text-white  text-center">
                     <input
                       type="checkbox"
                       checked={coupon.available}

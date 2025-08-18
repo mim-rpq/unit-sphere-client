@@ -67,14 +67,14 @@ const AgreementRequests = () => {
           <table className="min-w-full  border border-secondary rounded-xl shadow-md">
             <thead className="bg-primary text-base-200">
               <tr>
-                <th className="py-3 px-4 text-left text-sm font-semibold">User Name</th>
-                <th className="py-3 px-4 text-left text-sm font-semibold">Email</th>
-                <th className="py-3 px-4 text-left text-sm font-semibold">Floor</th>
-                <th className="py-3 px-4 text-left text-sm font-semibold">Block</th>
-                <th className="py-3 px-4 text-left text-sm font-semibold">Room No</th>
-                <th className="py-3 px-4 text-left text-sm font-semibold">Rent</th>
-                <th className="py-3 px-4 text-left text-sm font-semibold">Date</th>
-                <th className="py-3 px-4 text-center text-sm font-semibold">Actions</th>
+                <th className="py-3 text-white    px-4 text-left text-sm font-semibold">User Name</th>
+                <th className="py-3 text-white px-4 text-left text-sm font-semibold">Email</th>
+                <th className="py-3 text-white px-4 text-left text-sm font-semibold">Floor</th>
+                <th className="py-3 text-white px-4 text-left text-sm font-semibold">Block</th>
+                <th className="py-3 text-white px-4 text-left text-sm font-semibold">Room No</th>
+                <th className="py-3 text-white px-4 text-left text-sm font-semibold">Rent</th>
+                <th className="py-3 text-white px-4 text-left text-sm font-semibold">Date</th>
+                <th className="py-3 text-white px-4 text-center text-sm font-semibold">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -83,14 +83,14 @@ const AgreementRequests = () => {
                   key={req._id}
                   className={`${idx % 2 === 0 ? "" : ""} hover:bg-secondary`}
                 >
-                  <td className="py-3 text-base-200 px-4">{req.userName}</td>
-                  <td className="py-3 text-base-200 px-4">{req.userEmail}</td>
-                  <td className="py-3 text-base-200 px-4">{req.floorNo}</td>
-                  <td className="py-3 text-base-200 px-4">{req.blockName}</td>
-                  <td className="py-3 text-base-200 px-4">{req.apartmentNo}</td>
-                  <td className="py-3  px-4 text-green-600 font-semibold">${req.rent}</td>
-                  <td className="py-3 text-base-200 px-4">{new Date(req.requestedDate).toLocaleDateString()}</td>
-                  <td className="py-3 px-4 text-center space-y-2 lg:space-y-0 space-x-2">
+                  <td className="py-3 text-white  px-4">{req.userName}</td>
+                  <td className="py-3 text-white  px-4">{req.userEmail}</td>
+                  <td className="py-3 text-white  px-4">{req.floorNo}</td>
+                  <td className="py-3 text-white  px-4">{req.blockName}</td>
+                  <td className="py-3 text-white  px-4">{req.apartmentNo}</td>
+                  <td className="py-3   px-4 text-green-600 font-semibold">${req.rent}</td>
+                  <td className="py-3 text-white  px-4">{new Date(req.requestedDate).toLocaleDateString()}</td>
+                  <td className="py-3 text-white px-4 text-center space-y-2 lg:space-y-0 space-x-2">
                     <button
                       onClick={() => handleAccept(req._id, req.userEmail)}
                       className="bg-gradient-to-r from-secondary to-primary border  cursor-pointer   text-base-200 px-3 py-1 rounded-full text-sm"

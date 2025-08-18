@@ -14,7 +14,7 @@ const AdminProfile = () => {
   const phone = '+1 416-123-4567';
 
   return (
-    <div className="max-w-4xl mx-auto mt-8 p-10 bg-gradient-to-r from-gray-900 to-primary shadow-2xl rounded-3xl border-l-4 border-secondary text-white">
+    <div className="max-w-4xl mx-auto bg-transparent mt-8 p-10 border shadow-2xl rounded-3xl border-l-4 border-secondary text-white">
       {/* Profile Header */}
       <div className="flex flex-col md:flex-row items-center gap-6">
         <img
@@ -41,15 +41,15 @@ const AdminProfile = () => {
 
       {/* Info Cards */}
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-gray-800 p-5 rounded-xl text-center shadow-md hover:scale-105 transition-transform">
+        <div className=" bg-transparent text-white border-r-4 border-l-0 border-[#BD00DD] rounded-xl shadow-md p-5 border hover:shadow-lg transition-all">
           <h3 className="text-lg text-gray-300">Role</h3>
           <p className="text-xl font-bold mt-2">Admin</p>
         </div>
-        <div className="bg-gray-800 p-5 rounded-xl text-center shadow-md hover:scale-105 transition-transform">
+        <div className="b bg-transparent text-white border-r-4 border-l-0 border-[#BD00DD] rounded-xl shadow-md p-5 border hover:shadow-lg transition-all">
           <h3 className="text-lg text-gray-300">Location</h3>
           <p className="text-xl font-bold mt-2">{address}</p>
         </div>
-        <div className="bg-gray-800 p-5 rounded-xl text-center shadow-md hover:scale-105 transition-transform">
+        <div className=" bg-transparent text-white border-r-4 border-l-0 border-[#BD00DD] rounded-xl shadow-md p-5 border hover:shadow-lg transition-all">
           <h3 className="text-lg text-gray-300">Contact</h3>
           <p className="text-xl font-bold mt-2">{phone}</p>
         </div>

@@ -95,7 +95,7 @@ const MakePaymentForm = () => {
                     <input
                         type="month"
                         {...register('month', { required: true })}
-                        className="input input-bordered w-full"
+                        className="input input-bordered w-full "
                     />
                 </div>
 

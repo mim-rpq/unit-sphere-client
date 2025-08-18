@@ -24,7 +24,7 @@ const NewsletterSubscribe = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-0"
+      className="flex items-center justify-center  md:gap-0"
     >
       <input
         type="email"

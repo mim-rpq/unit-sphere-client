@@ -31,8 +31,8 @@ const Home = () => {
       style={{ backgroundImage: `url(${apartmentBg3})` }}
     >
       <Banner />
-      <div className=" bg-base-200 py-9 mb-24">
-        <div className='max-w-7xl mx-auto'>
+      <div className="  bg-base-200 py-9">
+        <div className='max-w-7xl p-5 lg:p-0 mx-auto'>
           <FeaturedApartments apartments={apartments} />
         </div>
       </div>

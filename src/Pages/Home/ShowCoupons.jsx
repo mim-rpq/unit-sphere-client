@@ -25,12 +25,12 @@ const ShowCoupons = () => {
 
     return (
         <div className=" max-w-7xl mx-auto bg-base-200/70 py-12 px-4 md:px-8 rounded-lg">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 drop-shadow">
+            <h2 className="text-3xl font-bold text-center  mb-8 drop-shadow">
                  Grab Your Discount Coupons
             </h2>
 
             {coupons.length === 0 ? (
-                <p className="text-center text-gray-500 text-lg">No coupons available at the moment.</p>
+                <p className="text-center  text-lg">No coupons available at the moment.</p>
             ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                     {coupons.map((coupon) => (
